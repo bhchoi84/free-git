@@ -2,6 +2,18 @@
 # 작업하실 혹은 특정 폴더로 이동하여 해당 폴더내에서 아래 명령어 실행
 git init
 
+# 현재 git 설정 확인 
+# user.name=xxxxxx
+# user.email=xxxx@xxx.xx 
+# 존재 확인 
+git config --list
+
+# 내pc에 git 사용자, 이메일 정보 추가 
+# git 사용자, 이메일 정보추가 
+git config --global user.name "Your Name"
+git config --global user.email you@example.com
+
+
 # 2. 현재 git 상태 확인 
 # 파일추가, 수정, 변경, 폴더 추가 수정 후 변경상태 확인
 git status 
@@ -25,10 +37,79 @@ git status
 # git commit 시 아무 옵션이 없으면 메세지를 추가하라고 뜨는데 커밋시 메세지 추가는 -m 옵션으로 메세지 추가가능하다.
 git commit "변경사항 커밋"
 
+# 7. 커밋한 이력확인 
+# vim으로 열리면 :q로 나갈것 
+git log
+
+# 8. 로그 짧게 확인 
+git shortlog
+
+# 9. git status로 여러번 변경 된 후 내용확인 시 옵션 
+# git add ....
+
+# git checkout 의 용도는 2가지인데  modified 인 상태의 파일을 되돌릴때 사용
+# git checkout -- 코드1.txt
+
+# git commit -m "추가된 내용"
+# git은 1개파일 수정시 ( 추가, 삭제로 인식되면서 관리된다. )
+ 1 file changed, 3 insertions(+), 1 deletion(-)
 
 
+# 변경된 사항 확인
+git diff
+
+# 원격과 연결
+# ==================================
+# git init
+# git add README.md
+# git commit -m "first commit"
+# 위 내용은 local에서 이미 작업
+# ==================================
+git branch -M main
+git remote add origin https://github.com/bhchoi84/free-git.git
+git push -u origin main
+
+# 원격 repository 확인
+git remote 
+
+# git remote 메뉴얼
+git remote --help
+
+# 원격 remote 리파지토리 주소 가져오기
+git remote get-url origin
+
+# => 예상은 아래
+# https://github.com/bhchoi84/free-git.git
+
+# git push 원격으로 변경사항 전달
+git push --help
 
 
+# 현재 local commit의 내용을 원격 remository로 전달하여 관리
+git push origin main
+
+# Enumerating objects: 15, done.
+# Counting objects: 100% (15/15), done.
+# Delta compression using up to 6 threads
+# Compressing objects: 100% (11/11), done.
+# Writing objects: 100% (14/14), 1.88 KiB | 386.00 KiB/s, done.
+# Total 14 (delta 3), reused 0 (delta 0)
+# remote: Resolving deltas: 100% (3/3), done.
+# To https://github.com/bhchoi84/free-git.git
+#    6782ffc..fc5a388  main -> main
+
+
+# 원격 repository 에서 소스 fetch and merge 
+git pull origin main
+
+# cmd 터미널 한글 깨짐해결
+set LC_ALL=ko_KR.UTF-8
+
+# 파일 한글깨짐 해결
+git config --global --edit
+
+# 아래 한방에 해결
+git config --global core.quotepath false
 
 
 
