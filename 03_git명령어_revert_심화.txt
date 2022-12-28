@@ -1,0 +1,12 @@
+# 실수를 되돌리는 것도 commit으로 추가하면서 작업 
+# git revert HEAD  치면 vim 나온다. 내용입력 
+git revert HEAD 
+
+# revert는 실수한 기록도 남긴다.
+# 협업시 다른사람에게 잘못된 커밋이라는걸 알리는 의미
+
+# reset은 local
+# revert는 push해서 원격에 올라간경우 
+
+# 해시코드 값의 커밋으로 되돌아간다.
+git revert HEAD 해시코드7자리 
