@@ -1,0 +1,13 @@
+# git에 새로운 브랜치 생성 
+git branch development
+git branch stage
+git branch master
+
+# 로컬의 branch 확인 
+git branch
+
+# 다른 브랜치로 변경 
+git checkout development
+
+# Switched to branch 'development' 변경시 문구  노출 
+
