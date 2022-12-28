@@ -1,0 +1,7 @@
+# git 커밋 되돌리기 ( 1개 되돌리기 )
+# 커밋만 되돌리고 수정된 내용은 남아있다.
+git reset HEAD~1 
+
+
+git log --reflog
+
