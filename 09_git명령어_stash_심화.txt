@@ -1,0 +1,13 @@
+# git 특정 branch에서 작업 중이다가 다른 브랜치 갈려고 할 경우 
+# commit 없이 갈려고할때 사용 stash
+# git stash 현상황을 나타내는 이름 
+
+# 스태시 목록 확인 
+git stash list 
+
+
+# git stash 명령어 확인 
+git stash -d 
+
+#  stash 삭제
+git stash drop 
