@@ -1,0 +1,10 @@
+# 기준이 되는 브랜치 main or master에서 다른 작업한 브랜치를 가지고 온다.
+# 받는 쪽에서 가져온다.
+# 현재 브랜치 master 
+# 가져오는 브랜치 development 
+
+git checkout master 
+git merge development 
+# 위와 같이 할 경우 conflict 난다 왜? 코드3을 같이 수정했으므로
+
+
