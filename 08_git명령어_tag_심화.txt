@@ -1,0 +1,7 @@
+# tag를 사용해서 관리할수 있다.
+git tag v1.0.0
+
+# tag 목록 확인 
+git tag
+
+# git reset 해시코드 7자리 대신 tag로 대체 가능
