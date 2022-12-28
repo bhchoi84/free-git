@@ -11,3 +11,7 @@ git checkout development
 
 # Switched to branch 'development' 변경시 문구  노출 
 
+# 작업 후 commit 후
+
+# git checkout master 로 브랜치 변경 가능 
+git checkout master
