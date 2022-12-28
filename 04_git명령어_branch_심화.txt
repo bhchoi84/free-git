@@ -15,3 +15,11 @@ git checkout development
 
 # git checkout master 로 브랜치 변경 가능 
 git checkout master
+
+# 아침마다 확인 
+# git branch 로 현재 브랜치 확인 
+git branch 
+
+# git pull origin master 
+# git pull origin main 
+# 항상 원격의 브랜치를 우선 받는다 ( 왜 ? 다른 작업자의 내용 추가를 위해 )
