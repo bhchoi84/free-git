@@ -1,0 +1,5 @@
+#git 에서 다른 브랜치의 특정작업한 commit 한부분 만 가지고와서 merge 하고 싶을때 
+git cherry-pck 해시코드7자리 
+
+# conflict 나는 경우 merge해서 commit 
+# 해당 커밋시 원치않는 파일이 추가될수 있는거 같음 
