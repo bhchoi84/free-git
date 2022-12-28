@@ -1,1 +1,36 @@
 # 브랜치 전략 중 여러 파일이 막 합쳐지는게 아닌 방식으로 처리
+git rebase development
+
+
+
+bhchoi84@DESKTOP-SSI2AJ9 MINGW64 /d/all_workspace/Git/workspace/free-git (master)  
+
+$ git rebase development
+First, rewinding head to replay your work on top of it...
+#먼저 헤드를 되감아 그 위에 작업을 다시 재생합니다.
+Applying: master에서 코드3 수정 => development와 같은 파일 수정
+Using index info to reconstruct a base tree...
+M       코드3.txt
+Falling back to patching base and 3-way merge...
+#기본 패치 및 3방향 병합으로 대체
+Auto-merging 코드3.txt
+CONFLICT (content): Merge conflict in 코드3.txt
+error: Failed to merge in the changes.
+#conflict 나서 머지실패 
+hint: Use 'git am --show-current-patch' to see the failed patch
+# git am --show-current-patch
+Patch failed at 0001 master에서 코드3 수정 => development와 같은 파일 수정
+Resolve all conflicts manually, mark them as resolved with
+"git add/rm <conflicted_files>", then run "git rebase --continue".
+You can instead skip this commit: run "git rebase --skip".
+To abort and get back to the state before "git rebase", run "git rebase --abort". 
+
+
+# 코드3.txt conflict 난 파일 수정한 후 
+git add .
+# rebase 중 conflict 이므로 하나로 합쳐준다.
+git rebase --continue 
+
+
+# GUI TOOL 에서 보면 머지되는 과정이 rebase는 한줄로 보인다. 
+# 합쳐질때 master -> development갔다가 다시 master로 와서 합쳐지는 가지의 모양없이 merge
